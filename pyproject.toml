@@ -30,6 +30,9 @@ dev = [
 ]
 
 [tool.pdm.scripts]
+edgedb = {cmd = [
+    "docker-compose", "exec", "edgedb", "edgedb", "--tls-security=insecure"
+]}
 migration-create = {cmd = [
     "docker-compose", "exec", "edgedb", "edgedb", "--tls-security=insecure", "migration", "create",
 ]}
